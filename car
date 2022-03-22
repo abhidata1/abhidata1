@@ -1,3 +1,155 @@
-mustang_pads='sds';
-camaro_pads='sss';
-challenger_pads='ss';
+mustang_pads='10514630'
+mustang_pads_brembo='30110010'
+mustang_rear_pads='1551146500'
+
+camaro_pads_front='1600147401'
+camaro_pads_rear='1600105301'
+
+challenger_charger_pads_front='PS1149M'
+challenger_charger_pads_rear='10210530'
+
+mustang_rotor_front_base='12161098'
+mustang_rotor_front_brembo='BR900918'
+mustang_rotor_rear='12161087'
+
+camaro_rotor_front='12162124'
+camaro_rotor_rear='BR900746'
+
+challenger_charger_rotors_front='16010195'
+challenger_charger_rotors_rear='16011489'
+
+mustang_shocks='341587'
+mustang_struts='333488'
+
+camaro_shocks='G51975'
+camaro_struts='334686'
+
+challenger_charger_shocks='G51975'
+challenger_charger_struts='72248'
+
+mustang_tires_brembo='255/45-19'
+mustang_tires_standard='245/45-19'
+
+camaro_tires_front='245/45-20'
+camaro_tires_rear='275/40-20'
+
+challenger_tires_front='245/45-20'
+challenger_tires_rear='255/45-20'
+
+mustang_13_14_bulb='HD3S'
+mustang_11_12_bulb='9008'
+
+challenger_bulb='9005'
+
+camaro_bulb='9008'
+
+print('Enter your name:')
+x=input()
+print('Hello, ' + x)
+model=input('Please enter the model enter "Mustang" for 2011-2014 Ford Mustang GT Premium, enter "Camaro" for 2010-2014 Chevrolet Camaro 2SS and "Challenger" for 2010-2014 Dodge Challenger SRT8/392\n')
+
+
+if (model=='Mustang'):
+    input_mustang=input('Enter "rotors" for brake rotors, "pads" for brake pads, "bulb" for headlight bulb, "tires" for tires, "shock" for shocks or "struts" for struts.\n')
+    
+    if (input_mustang=='pads'):
+        input_mustang_brakes=input('If the car is equipped with the brembo brake package enter "brembo" otherwise enter "base".\n')
+        
+        if (input_mustang_brakes=='brembo'):
+            print('The part number for the front brake pads is ', mustang_pads_brembo,' and the part number for the rear brake pads is ', mustang_rear_pads,'.')
+                
+        elif(input_mustang_brakes=='base'):
+            print('The part number for the front brake pads is ', mustang_pads,' and the part number for the rear brake pads is ' , mustang_rear_pads,'.')
+        
+        elif():
+            print('Incorrect entry. Please try again.')
+            
+    elif (input_mustang=='rotors'):
+        input_mustang_rotors=input('If the car is equipped with the brembo brake package enter "brembo" otherwise enter "base".\n')
+        
+        if (input_mustang_rotors=='brembo'):
+            print('The part number for the front brake rotors is ', mustang_rotor_front_brembo,' and the part number for the rear brake pads is ', mustang_rotor_rear,'.')
+        
+        elif(input_mustang_rotors=='base'):
+            print('The part number for the front brake pads is ', mustang_rotor_front_base,' and the part number for the rear brake pads is ', mustang_rotor_rear,'.')
+        
+        elif():
+            print('Incorrect entry. Please try again.')
+
+    elif (input_mustang=='bulb'):
+        input_brembo_bulb=input('What year is the vehicle (2011-2014)? Enter your answer in the format 20xx.\n')
+            
+        if (input_brembo_bulb=='2011' or input_brembo_bulb=='2012'):
+            print('The part number for the headlight bulb of the 2011/2012 Mustang is ', mustang_11_12_bulb,'.')
+            
+        elif (input_brembo_bulb=='2013' or input_brembo_bulb=='2014'):
+            print('The part number for the headlight bulb of the 2013/2014 Mustang is ', mustang_13_14_bulb,'.')
+        elif():
+            print('Incorrect entry. Please try again.')
+                
+    elif (input_mustang=='shock'):
+        print('The part number for the shock of the Mustang is ', mustang_shocks,'.')
+    
+    elif (input_mustang=='struts'):
+        print('The part number for the struts of the Mustang is ', mustang_struts,'.')
+        
+    elif (input_mustang=='tires'):
+        input_mustang_tires=input('If the car is equipped with the brembo brake package enter "brembo" otherwise enter "base".\n')
+            
+        if (input_mustang_tires=='brembo'):
+            print('The tire size of the mustang is ', mustang_tires_brembo,'.')
+                
+        elif (input_mustang_tires=='base'):
+            print('The tire size of the mustang is ', mustang_tires_standard,'.')
+                
+        elif():
+            print('Incorrect entry. Please try again.')
+            
+elif (model=='Camaro'):
+    input_camaro=input('Enter "rotors" for brake rotors, "pads" for brake pads, "bulb" for headlight bulb, "tires" for tires, "shock" for shocks or "struts" for struts.\n')
+    
+    if (input_camaro=='pads'):
+        print('The part number for the front brake pads is ', camaro_pads_front,' and the part number for the rear brake pads is ', camaro_pads_rear,'.')
+            
+    elif (input_camaro=='rotors'):
+        print('The part number for the front brake pads is ', camaro_rotor_front,' and the part number for the rear brake pads is ', camaro_rotor_rear,'.')
+
+    elif (input_camaro=='bulb'):
+        print('The part number for the headlight bulb of the Camaro is ', camaro_bulb,'.')
+                
+    elif (input_camaro=='shock'):
+        print('The part number for the shock of the Camaro is ', camaro_shocks,'.')
+                
+    elif (input_camaro=='struts'):
+        print('The part number for the struts of the Camaro is ', camaro_struts,'.')
+                
+    elif (input_camaro=='tires'):
+        print('The front tire size of the Camaro is ', camaro_tires_front,' and the rear tire size of the Camaro is ', camaro_tires_rear,'.')
+    elif():
+        print('Incorrect entry. Please try again.')
+        
+elif (model=='Challenger'):
+    input_challenger=input('Enter "rotors" for brake rotors, "pads" for brake pads, "bulb" for headlight bulb, "tires" for tires, "shock" for shocks or "struts" for struts.\n')
+    
+    if (input_challenger=='pads'):
+        print('The part number for the front brake pads is ', challenger_charger_pads_front,' and the part number for the rear brake pads is ', challenger_charger_pads_rear,'.')
+            
+    elif (input_challenger=='rotors'):
+        print('The part number for the front brake pads is ', challenger_charger_rotors_front,' and the part number for the rear brake pads is ', challenger_charger_rotors_rear,'.')
+
+    elif (input_challenger=='bulb'):
+        print('The part number for the headlight bulb of the Challenger is ', challenger_bulb,'.')
+                
+    elif (input_challenger=='shock'):
+        print('The part number for the shock of the Challenger is ', challenger_charger_shocks,'.')
+                
+    elif (input_challenger=='struts'):
+        print('The part number for the struts of the Challenger is ', challenger_charger_struts,'.')
+                
+    elif (input_challenger=='tires'):
+        print('The front tire size of the Challenger is ', challenger_tires_front,' and the rear tire size of the Camaro is ', challenger_tires_rear,'.')
+    elif():
+        print('Incorrect entry. Please try again.')
+
+elif():
+    print('Incorrect entry. Please try again.')
